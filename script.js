@@ -1,27 +1,13 @@
 
 
+//Template strings
 
-//Objetos
+let nome = 'Mateus';
+let sobrenome = 'Teste';
+let idade = 26;
 
-let pessoa = {
-    nome: 'Aluno',
-    idade: 25,
-    altura: 1.76,
-    cargo: 'Desenvolvedor'
-};
+//let mensagem = 'Meu nome é ' + nome + ' ' + sobrenome + ' e tenho ' + idade + ' anos.';
 
-let carro = {
-    nome: 'Fusca',
-    cor: 'Branco',
-    potencia: '140cv'
-};
+let mensagem = `Meu nome é ${nome} ${sobrenome} e tenho ${idade} anos.`;
 
-
-let usuarios = [
-    {nome: 'Mateus', cargo: 'Programador Frontend', status: 'Ativo'},
-    {nome: 'Maria', cargo: 'Programadora Backend', status: 'Ativo'},
-    {nome: 'Felipe', cargo: 'Programador Mobile', status: 'Inativo'}
-];
-
-
-console.log(usuarios);
+console.log(mensagem);
