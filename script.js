@@ -1,13 +1,37 @@
+let pessoa = {
+    nome: 'Mateus',
+    sobrenome: 'Sobrenome Teste',
+    empresa: 'Empresa Teste',
+    cargo: 'Programador FullStack'
+};
 
+console.log(pessoa.nome);
+console.log(pessoa.cargo);
 
-//Template strings
+let nome = 'Nome Maria';
 
-let nome = 'Mateus';
-let sobrenome = 'Teste';
-let idade = 26;
+const {nome:nomePessoa, cargo, empresa, sobrenome} = pessoa;
 
-//let mensagem = 'Meu nome é ' + nome + ' ' + sobrenome + ' e tenho ' + idade + ' anos.';
+console.log(`Nome da pessoa: ${nomePessoa}`);
+console.log(sobrenome);
 
-let mensagem = `Meu nome é ${nome} ${sobrenome} e tenho ${idade} anos.`;
+console.log(cargo);
+console.log(empresa);
 
-console.log(mensagem);
+// ======================
+
+// Desconstruir um Array
+
+// ======================
+
+let nomes = ['Mateus', 'Maria', 'João', 'Lucas'];
+
+let {0:mateus, 2:joao} = nomes;
+
+console.log(mateus);
+console.log(joao);
+
+let [primeiroNome, segundoNome] = nomes;
+
+console.log(primeiroNome);
+console.log(segundoNome);
