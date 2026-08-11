@@ -1,37 +1,36 @@
+
+
+// Spread Operator
+
+let primeiros = [1, 2, 3];
+
+let numeros = [...primeiros, 4, 5, 10];
+console.log(numeros);
+
 let pessoa = {
     nome: 'Mateus',
-    sobrenome: 'Sobrenome Teste',
-    empresa: 'Empresa Teste',
-    cargo: 'Programador FullStack'
-};
+    idade: 47,
+    cargo: 'RH'
+}
 
-console.log(pessoa.nome);
-console.log(pessoa.cargo);
+let novaPessoa = {
+    ...pessoa,
+    status: 'ATIVO',
+    cidade: 'Campo Grande / MS',
+    telefone: '678517519'
+}
 
-let nome = 'Nome Maria';
+console.log(novaPessoa);
 
-const {nome:nomePessoa, cargo, empresa, sobrenome} = pessoa;
+function novoUsuario(info) {
+   let data = {
+    ...info,
+    status: 'ATIVO',
+    iniciando: '21/02/2025',
+    codigo: '1231234'
+   }
 
-console.log(`Nome da pessoa: ${nomePessoa}`);
-console.log(sobrenome);
+   console.log(data)
+}
 
-console.log(cargo);
-console.log(empresa);
-
-// ======================
-
-// Desconstruir um Array
-
-// ======================
-
-let nomes = ['Mateus', 'Maria', 'João', 'Lucas'];
-
-let {0:mateus, 2:joao} = nomes;
-
-console.log(mateus);
-console.log(joao);
-
-let [primeiroNome, segundoNome] = nomes;
-
-console.log(primeiroNome);
-console.log(segundoNome);
+novoUsuario({ nome: 'Jorge', sobrenome: 'Silva', cargo: 'DEV' })
