@@ -1,18 +1,24 @@
 
-// Resto Operator
+// Map = Percorrer todo um Array
 
-function convidados(...nomes) {
-    console.log('Seja bem vindo todos convidados');
-    console.log(nomes);
-}
+let lista = ['Mateus', 'Jose', 'Maria', 'Lucas'];
 
-convidados('Jorge', 'Carlos', 'Jose', 'Lucas')
+lista.map((item, index) => {
+    console.log(`Passando: ${item} - está na posicao: ${index}`)
+})
 
-function sorteador(...numeros){
-    console.log(numeros);
+//Reduce = O reduce busca reduzir um array
 
-    const numeroGerado = Math.floor(Math.random() * numeros.length);
-    console.log(`Numero gerado foi: ${numeros[numeroGerado]}`);
-}
+let numeros = [5, 3, 2, 5];
 
-sorteador(1,3,81,5,42,531,3,642,3145);
+let total = numeros.reduce((acumulador, numero, indice, original) => {
+    console.log(`${acumulador} - total ate o momento`)
+    console.log(`${numero} - valor atual`)
+    console.log(`${indice} - indice atual`)
+    console.log(`${original} - array original`)
+    console.log(`=============================`)
+
+    return acumulador += numero;
+})
+
+console.log('Total do Reduce: ' + total)
