@@ -1,36 +1,18 @@
 
+// Resto Operator
 
-// Spread Operator
-
-let primeiros = [1, 2, 3];
-
-let numeros = [...primeiros, 4, 5, 10];
-console.log(numeros);
-
-let pessoa = {
-    nome: 'Mateus',
-    idade: 47,
-    cargo: 'RH'
+function convidados(...nomes) {
+    console.log('Seja bem vindo todos convidados');
+    console.log(nomes);
 }
 
-let novaPessoa = {
-    ...pessoa,
-    status: 'ATIVO',
-    cidade: 'Campo Grande / MS',
-    telefone: '678517519'
+convidados('Jorge', 'Carlos', 'Jose', 'Lucas')
+
+function sorteador(...numeros){
+    console.log(numeros);
+
+    const numeroGerado = Math.floor(Math.random() * numeros.length);
+    console.log(`Numero gerado foi: ${numeros[numeroGerado]}`);
 }
 
-console.log(novaPessoa);
-
-function novoUsuario(info) {
-   let data = {
-    ...info,
-    status: 'ATIVO',
-    iniciando: '21/02/2025',
-    codigo: '1231234'
-   }
-
-   console.log(data)
-}
-
-novoUsuario({ nome: 'Jorge', sobrenome: 'Silva', cargo: 'DEV' })
+sorteador(1,3,81,5,42,531,3,642,3145);
