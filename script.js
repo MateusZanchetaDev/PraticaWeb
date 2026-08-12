@@ -1,22 +1,25 @@
 
-// Find = Buscar algo na lista
+//Funcoes anonimas
 
-let listagem = [5, 3 , 'Jose', 2, 'Mateus'];
+function somar(a, b) {
+    let total = a + b;
 
-let busca = listagem.find((item)=> {
-    if(item === 'Jose') {
-        return console.log('Item encontrado com sucesso');
-    }
+    return console.log(total);
+}
+
+somar(10,30);
+
+//Funcao anonima
+let subtrair = (valor1, valor2) => {
+    let total = valor1 - valor2;
+
+    return console.log(total);
+}
+
+subtrair(50, 25);
+
+let numeros = [1, 3, 5, 10];
+
+numeros.map((item) => {
+    console.log(item);
 })
-
-//console.log(busca);
-
-// Filter = filtrar lista
-
-let palavras = ['Mateus', 'Ana', 'Jose', 'Ricardo', 'Sujeito Programador', 'Jose'];
-
-let resultado = palavras.filter((item) => {
-    return item === 'Jose';
-})
-
-console.log(resultado);
